@@ -226,6 +226,12 @@ For a string:
 BANANA$
 ```
 
+output is:
+
+```text
+annb$aa,4
+```
+
 The algorithm:
 
 1. Generates all rotations
@@ -277,7 +283,13 @@ For each symbol:
 Input:
 
 ```text
-banana
+annb$aa,4
+```
+
+Output:
+
+```text
+0202330
 ```
 
 Produces many low-valued integers after BWT.
