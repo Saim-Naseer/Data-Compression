@@ -99,8 +99,7 @@ void get_code_lengths(Node *root, int depth, unsigned char lengths[256])
   get_code_lengths(root->right, depth + 1, lengths);
 }
 
-void generate_canonical_codes(unsigned char lengths[256],
-                              HuffmanCode codes[256])
+void generate_canonical_codes(unsigned char lengths[256], HuffmanCode codes[256])
 {
   for (int i = 0; i < 256; i++)
   {
@@ -126,9 +125,7 @@ void generate_canonical_codes(unsigned char lengths[256],
   {
     for (int j = i + 1; j < count; j++)
     {
-      if (lengths[symbols[i]] > lengths[symbols[j]] ||
-          (lengths[symbols[i]] == lengths[symbols[j]] &&
-           symbols[i] > symbols[j]))
+      if (lengths[symbols[i]] > lengths[symbols[j]] || (lengths[symbols[i]] == lengths[symbols[j]] && symbols[i] > symbols[j]))
       {
         int t = symbols[i];
         symbols[i] = symbols[j];

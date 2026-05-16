@@ -50,10 +50,7 @@ void bwt_encode(const unsigned char *input, size_t len, unsigned char *output, i
     temp[len] = first;
   }
 
-  qsort(rotations,
-        len + 1,
-        sizeof(char *),
-        compare_rotations);
+  qsort(rotations, len + 1, sizeof(char *), compare_rotations);
 
   for (size_t i = 0; i < len + 1; i++)
   {

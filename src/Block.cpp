@@ -92,8 +92,7 @@ int reassemble_blocks(BlockManager *manager, const char *output_filename)
 
   for (int i = 0; i < manager->num_blocks; i++)
   {
-    file.write(reinterpret_cast<char *>(manager->blocks[i].data),
-               manager->blocks[i].size);
+    file.write(reinterpret_cast<char *>(manager->blocks[i].data), manager->blocks[i].size);
   }
   return 0;
 }
